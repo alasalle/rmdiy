@@ -3,7 +3,7 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 var config = {
-  apiKey: "AIzaSyB0F9XAuvMmsWG5LKEyWPbk2GL-o0yxIJ8",
+    apiKey: "AIzaSyB0F9XAuvMmsWG5LKEyWPbk2GL-o0yxIJ8",
     authDomain: "rmdiy-18295.firebaseapp.com",
     databaseURL: "https://rmdiy-18295.firebaseio.com",
     projectId: "rmdiy-18295",
@@ -16,7 +16,6 @@ var config = {
 class Firebase {
   constructor() {
     app.initializeApp(config)
-    app.analytics();
     this.auth = app.auth()
     this.emailAuthProvider = app.auth.EmailAuthProvider
     this.fieldValue = app.firestore.FieldValue
