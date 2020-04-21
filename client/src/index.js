@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 const client = new ApolloClient({
-  uri: 'https://mighty-anchorage-40936.herokuapp.com/',
+  uri: 'https://rmdiy.herokuapp.com/',
   resolvers: {},
 });
 

@@ -4,7 +4,7 @@
 
 
 type User {
-  id: ID! @unique
+  id: ID! @unique @id
   thirdPartyUID: String @unique
   firebaseUID: String @unique
   username: String! @unique
@@ -22,14 +22,14 @@ type User {
 }
 
 type Project {
- id: ID! @unique
+ id: ID! @unique @id
  name: String!
  key: String @unique
  category: String!
  timestamp: DateTime!
  titleImg: String! @default(value: "https://res.cloudinary.com/dv1rhurfd/image/upload/c_scale,w_400/v1555355210/project%20images/doodle-3644073_640.png")
  titleBlurb: String! @default(value: "I hope you like my project")
- rating: [Int!] @default(value: [])
+ rating: [Int!] @scalarList(strategy: RELATION)
  steps: String! @default(value: "[{\"type\":\"img\",\"body\":\"https://res.cloudinary.com/dv1rhurfd/image/upload/v1557536458/step1.jpg\"},{\"type\":\"text\",\"body\":\"Step 1\"}]")
  User: User! @relation(name: "UserProjects")
  Reviews:[Review!] @relation(name: "ProjectReviews" onDelete: CASCADE)
@@ -37,7 +37,7 @@ type Project {
 }
   
 type Review {
-  id: ID! @unique 
+  id: ID! @unique @id
   name: String!
   rKey: String @unique
   text: String!

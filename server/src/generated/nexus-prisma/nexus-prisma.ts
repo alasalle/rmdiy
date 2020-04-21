@@ -3114,6 +3114,7 @@ export type ReviewWhereUniqueInputInputObject =
   | { name: 'rKey', alias?: string  } 
   
 export interface UserCreateInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3131,6 +3132,7 @@ export interface UserCreateInput {
 }
 export type UserCreateInputInputObject =
   | Extract<keyof UserCreateInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3156,6 +3158,7 @@ export type ReviewCreateManyWithoutAuthorInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ReviewCreateWithoutAuthorInput {
+  id?: string | null
   name?: string
   rKey?: string | null
   text?: string
@@ -3169,6 +3172,7 @@ export interface ReviewCreateWithoutAuthorInput {
 }
 export type ReviewCreateWithoutAuthorInputInputObject =
   | Extract<keyof ReviewCreateWithoutAuthorInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'rKey', alias?: string  } 
   | { name: 'text', alias?: string  } 
@@ -3190,6 +3194,7 @@ export type UserCreateManyWithoutLikedReviewsInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface UserCreateWithoutLikedReviewsInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3206,6 +3211,7 @@ export interface UserCreateWithoutLikedReviewsInput {
 }
 export type UserCreateWithoutLikedReviewsInputInputObject =
   | Extract<keyof UserCreateWithoutLikedReviewsInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3230,6 +3236,7 @@ export type ReviewCreateManyWithoutDislikedByInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ReviewCreateWithoutDislikedByInput {
+  id?: string | null
   name?: string
   rKey?: string | null
   text?: string
@@ -3243,6 +3250,7 @@ export interface ReviewCreateWithoutDislikedByInput {
 }
 export type ReviewCreateWithoutDislikedByInputInputObject =
   | Extract<keyof ReviewCreateWithoutDislikedByInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'rKey', alias?: string  } 
   | { name: 'text', alias?: string  } 
@@ -3264,6 +3272,7 @@ export type UserCreateOneWithoutReviewListInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface UserCreateWithoutReviewListInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3280,6 +3289,7 @@ export interface UserCreateWithoutReviewListInput {
 }
 export type UserCreateWithoutReviewListInputInputObject =
   | Extract<keyof UserCreateWithoutReviewListInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3304,6 +3314,7 @@ export type ReviewCreateManyWithoutLikedByInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ReviewCreateWithoutLikedByInput {
+  id?: string | null
   name?: string
   rKey?: string | null
   text?: string
@@ -3317,6 +3328,7 @@ export interface ReviewCreateWithoutLikedByInput {
 }
 export type ReviewCreateWithoutLikedByInputInputObject =
   | Extract<keyof ReviewCreateWithoutLikedByInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'rKey', alias?: string  } 
   | { name: 'text', alias?: string  } 
@@ -3338,6 +3350,7 @@ export type UserCreateManyWithoutDislikedReviewsInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface UserCreateWithoutDislikedReviewsInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3354,6 +3367,7 @@ export interface UserCreateWithoutDislikedReviewsInput {
 }
 export type UserCreateWithoutDislikedReviewsInputInputObject =
   | Extract<keyof UserCreateWithoutDislikedReviewsInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3378,6 +3392,7 @@ export type ProjectCreateManyWithoutUserInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ProjectCreateWithoutUserInput {
+  id?: string | null
   name?: string
   key?: string | null
   category?: string
@@ -3391,6 +3406,7 @@ export interface ProjectCreateWithoutUserInput {
 }
 export type ProjectCreateWithoutUserInputInputObject =
   | Extract<keyof ProjectCreateWithoutUserInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'key', alias?: string  } 
   | { name: 'category', alias?: string  } 
@@ -3419,6 +3435,7 @@ export type ReviewCreateManyWithoutProjectReviewedInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ReviewCreateWithoutProjectReviewedInput {
+  id?: string | null
   name?: string
   rKey?: string | null
   text?: string
@@ -3432,6 +3449,7 @@ export interface ReviewCreateWithoutProjectReviewedInput {
 }
 export type ReviewCreateWithoutProjectReviewedInputInputObject =
   | Extract<keyof ReviewCreateWithoutProjectReviewedInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'rKey', alias?: string  } 
   | { name: 'text', alias?: string  } 
@@ -3453,6 +3471,7 @@ export type UserCreateManyWithoutRatedProjectsInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface UserCreateWithoutRatedProjectsInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3469,6 +3488,7 @@ export interface UserCreateWithoutRatedProjectsInput {
 }
 export type UserCreateWithoutRatedProjectsInputInputObject =
   | Extract<keyof UserCreateWithoutRatedProjectsInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3493,6 +3513,7 @@ export type ProjectCreateManyWithoutRatedByInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ProjectCreateWithoutRatedByInput {
+  id?: string | null
   name?: string
   key?: string | null
   category?: string
@@ -3506,6 +3527,7 @@ export interface ProjectCreateWithoutRatedByInput {
 }
 export type ProjectCreateWithoutRatedByInputInputObject =
   | Extract<keyof ProjectCreateWithoutRatedByInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'key', alias?: string  } 
   | { name: 'category', alias?: string  } 
@@ -3527,6 +3549,7 @@ export type UserCreateOneWithoutProjectsInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface UserCreateWithoutProjectsInput {
+  id?: string | null
   thirdPartyUID?: string | null
   firebaseUID?: string | null
   username?: string
@@ -3543,6 +3566,7 @@ export interface UserCreateWithoutProjectsInput {
 }
 export type UserCreateWithoutProjectsInputInputObject =
   | Extract<keyof UserCreateWithoutProjectsInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'thirdPartyUID', alias?: string  } 
   | { name: 'firebaseUID', alias?: string  } 
   | { name: 'username', alias?: string  } 
@@ -3567,6 +3591,7 @@ export type ProjectCreateOneWithoutReviewsInputInputObject =
   | { name: 'connect', alias?: string  } 
   
 export interface ProjectCreateWithoutReviewsInput {
+  id?: string | null
   name?: string
   key?: string | null
   category?: string
@@ -3580,6 +3605,7 @@ export interface ProjectCreateWithoutReviewsInput {
 }
 export type ProjectCreateWithoutReviewsInputInputObject =
   | Extract<keyof ProjectCreateWithoutReviewsInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'key', alias?: string  } 
   | { name: 'category', alias?: string  } 
@@ -5229,6 +5255,7 @@ export type UserUpdateManyMutationInputInputObject =
   | { name: 'accountType', alias?: string  } 
   
 export interface ProjectCreateInput {
+  id?: string | null
   name?: string
   key?: string | null
   category?: string
@@ -5243,6 +5270,7 @@ export interface ProjectCreateInput {
 }
 export type ProjectCreateInputInputObject =
   | Extract<keyof ProjectCreateInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'key', alias?: string  } 
   | { name: 'category', alias?: string  } 
@@ -5304,6 +5332,7 @@ export type ProjectUpdateManyMutationInputInputObject =
   | { name: 'steps', alias?: string  } 
   
 export interface ReviewCreateInput {
+  id?: string | null
   name?: string
   rKey?: string | null
   text?: string
@@ -5318,6 +5347,7 @@ export interface ReviewCreateInput {
 }
 export type ReviewCreateInputInputObject =
   | Extract<keyof ReviewCreateInput, string>
+  | { name: 'id', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'rKey', alias?: string  } 
   | { name: 'text', alias?: string  } 

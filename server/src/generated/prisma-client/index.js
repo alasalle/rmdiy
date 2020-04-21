@@ -20,6 +20,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://labspt2ratemydiy-4a16450ef9.herokuapp.com/ratemydiyprismaserver/dev`
+  endpoint: `https://us1.prisma.sh/angelina-la-salle/rmdiy/prod`
 });
 exports.prisma = new exports.Prisma();

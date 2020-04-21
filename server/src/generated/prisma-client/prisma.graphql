@@ -78,6 +78,7 @@ type ProjectConnection {
 }
 
 input ProjectCreateInput {
+  id: ID
   name: String!
   key: String
   category: String!
@@ -111,6 +112,7 @@ input ProjectCreateratingInput {
 }
 
 input ProjectCreateWithoutRatedByInput {
+  id: ID
   name: String!
   key: String
   category: String!
@@ -124,6 +126,7 @@ input ProjectCreateWithoutRatedByInput {
 }
 
 input ProjectCreateWithoutReviewsInput {
+  id: ID
   name: String!
   key: String
   category: String!
@@ -137,6 +140,7 @@ input ProjectCreateWithoutReviewsInput {
 }
 
 input ProjectCreateWithoutUserInput {
+  id: ID
   name: String!
   key: String
   category: String!
@@ -616,6 +620,7 @@ type ReviewConnection {
 }
 
 input ReviewCreateInput {
+  id: ID
   name: String!
   rKey: String
   text: String!
@@ -650,6 +655,7 @@ input ReviewCreateManyWithoutProjectReviewedInput {
 }
 
 input ReviewCreateWithoutAuthorInput {
+  id: ID
   name: String!
   rKey: String
   text: String!
@@ -663,6 +669,7 @@ input ReviewCreateWithoutAuthorInput {
 }
 
 input ReviewCreateWithoutDislikedByInput {
+  id: ID
   name: String!
   rKey: String
   text: String!
@@ -676,6 +683,7 @@ input ReviewCreateWithoutDislikedByInput {
 }
 
 input ReviewCreateWithoutLikedByInput {
+  id: ID
   name: String!
   rKey: String
   text: String!
@@ -689,6 +697,7 @@ input ReviewCreateWithoutLikedByInput {
 }
 
 input ReviewCreateWithoutProjectReviewedInput {
+  id: ID
   name: String!
   rKey: String
   text: String!
@@ -1169,6 +1178,7 @@ type UserConnection {
 }
 
 input UserCreateInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!
@@ -1211,6 +1221,7 @@ input UserCreateOneWithoutReviewListInput {
 }
 
 input UserCreateWithoutDislikedReviewsInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!
@@ -1227,6 +1238,7 @@ input UserCreateWithoutDislikedReviewsInput {
 }
 
 input UserCreateWithoutLikedReviewsInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!
@@ -1243,6 +1255,7 @@ input UserCreateWithoutLikedReviewsInput {
 }
 
 input UserCreateWithoutProjectsInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!
@@ -1259,6 +1272,7 @@ input UserCreateWithoutProjectsInput {
 }
 
 input UserCreateWithoutRatedProjectsInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!
@@ -1275,6 +1289,7 @@ input UserCreateWithoutRatedProjectsInput {
 }
 
 input UserCreateWithoutReviewListInput {
+  id: ID
   thirdPartyUID: String
   firebaseUID: String
   username: String!

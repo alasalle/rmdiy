@@ -1,5 +1,6 @@
 # The HTTP endpoint for your Prisma API
-endpoint: 'https://labspt2ratemydiy-4a16450ef9.herokuapp.com/ratemydiyprismaserver/dev'
+#endpoint: ''
+endpoint: https://us1.prisma.sh/angelina-la-salle/rmdiy/prod
 
 # Add any other deployment links under here to keep it clean
 

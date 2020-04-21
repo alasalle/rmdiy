@@ -3,17 +3,20 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 var config = {
-  apiKey: 'AIzaSyA5At5iJg-ngD1uUquKrjflPdF7wxXJOsM',
-  authDomain: 'ratemydiy-9453b.firebaseapp.com',
-  databaseURL: 'https://ratemydiy-9453b.firebaseio.com',
-  projectId: 'ratemydiy-9453b',
-  storageBucket: 'ratemydiy-9453b.appspot.com',
-  messagingSenderId: '714087561173',
+  apiKey: "AIzaSyB0F9XAuvMmsWG5LKEyWPbk2GL-o0yxIJ8",
+    authDomain: "rmdiy-18295.firebaseapp.com",
+    databaseURL: "https://rmdiy-18295.firebaseio.com",
+    projectId: "rmdiy-18295",
+    storageBucket: "rmdiy-18295.appspot.com",
+    messagingSenderId: "542093042806",
+    appId: "1:542093042806:web:9563fd45b09600fbafeb57",
+    measurementId: "G-1L4X92F409"
 }
 
 class Firebase {
   constructor() {
     app.initializeApp(config)
+    app.analytics();
     this.auth = app.auth()
     this.emailAuthProvider = app.auth.EmailAuthProvider
     this.fieldValue = app.firestore.FieldValue

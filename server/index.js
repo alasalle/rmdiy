@@ -185,7 +185,7 @@ const Mutation = prismaObjectType({
           username: username
         });
         mailOptions = {
-          from: 'ratemydiyproject@gmail.com', // sender address
+          from: 'rmdiy@yahoo.com', // sender address
           to: email, // list of receivers
           subject: 'Welcome to Rate My DIY!', // Subject line
           html: template // plain text body
@@ -297,7 +297,7 @@ const Mutation = prismaObjectType({
           });
 
           mailOptions = {
-            from: 'ratemydiyproject@gmail.com', // sender address
+            from: 'rmdiy@yahoo.com', // sender address
             to: projectAuthor.email, // list of receivers
             subject: 'Your project has a new review!', // Subject line
             html: template // plain text body
@@ -330,7 +330,7 @@ const Mutation = prismaObjectType({
           });
 
           mailOptions = {
-            from: 'ratemydiyproject@gmail.com', // sender address
+            from: 'rmdiy@yahoo.com', // sender address
             to: projectAuthor.email, // list of receivers
             subject: 'Your project has a new review!', // Subject line
             html: template // plain text body
@@ -462,7 +462,7 @@ const Mutation = prismaObjectType({
           name: username
         });
         mailOptions = {
-          from: 'ratemydiyproject@gmail.com', // sender address
+          from: 'rmdiy@yahoo.com', // sender address
           to: email, // list of receivers
           subject: 'Welcome to Rate My DIY!', // Subject line
           html: template // plain text body
