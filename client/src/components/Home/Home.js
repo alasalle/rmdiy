@@ -51,8 +51,7 @@ class Home extends Component {
 
     eliminateEmptyReviews.map(user => {
       return user.ReviewList.map(review => {
-        reviewTimes.push(review.timestamp)
-        return null
+        return reviewTimes.push(review.timestamp)
       })
     })
 
@@ -105,7 +104,7 @@ class Home extends Component {
   render() {
     const projects =
       this.filterByCurrentMonth(this.props.projectArray)
-        .slice(0, 4)
+        .slice(0, 3)
         .sort(function(a, b) {
           return b.rating - a.rating
         }) || []
@@ -146,16 +145,16 @@ class Home extends Component {
             averageRating: average,
           }
         })
-        .filter((e) => e !== undefined && e !== null) || []
+        .filter((e) => e !== undefined && e !== null).slice(0, 3) || []
 
     const sortedMakers =
       currentMakers
         .sort(function(a, b) {
           return b.averageRating - a.averageRating
         })
-        .slice(0, 8) || []
+        .slice(0, 3) || []
 
-    const reviews = this.filterByCurrentMonthReviews(this.props.userArray) || []
+    const reviews = this.filterByCurrentMonthReviews(this.props.userArray).slice(0, 3) || []
 
     if (this.props.userArray[0]) {
       return (

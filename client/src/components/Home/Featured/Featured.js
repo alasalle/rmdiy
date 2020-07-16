@@ -47,7 +47,7 @@ function Featured(props) {
       >
         <SkeletonTheme highlightColor="#6fb3b8">
           <div className="img-responsive">
-            <Skeleton height={300} width={300} />
+            <Skeleton height={200} width={200} />
           </div>
           <div className="infoContainer">
             {/* <div> */}
