@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import gql from 'graphql-tag';
 import { Redirect } from 'react-router-dom';
 import { Mutation, Query } from 'react-apollo';
-import { TwitterLoginButton } from 'react-social-login-buttons';
+import { FacebookLoginButton } from 'react-social-login-buttons';
 import '../SignIn.scss'
 
 const CHECK_IF_USER_EXISTS = gql`
@@ -40,7 +40,7 @@ const firebaseSignUp = gql`
   }
 `;
 
-class SignInTwitterBase extends Component {
+class SignInFacebookBase extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,7 +67,7 @@ class SignInTwitterBase extends Component {
   };
   onSubmit = (event) => {
     this.props.firebase
-      .doSignInWithTwitter()
+      .doSignInWithFacebook()
       .then((socialAuthUser) => {
         const thirdPartyUID = socialAuthUser.user.providerData['0'].uid;
         this.setState({ uid: thirdPartyUID, isOpen: true });
@@ -90,7 +90,7 @@ class SignInTwitterBase extends Component {
             if (loading)
               return (
                 <form onSubmit={this.onSubmit}>
-                  <TwitterLoginButton
+                  <FacebookLoginButton
                     size="35px"
                     align="center"
                     onClick={this.onSubmit}
@@ -103,7 +103,7 @@ class SignInTwitterBase extends Component {
               console.log({ error: checkError });
               return (
                 <form onSubmit={this.onSubmit}>
-                  <TwitterLoginButton
+                  <FacebookLoginButton
                     size="35px"
                     align="center"
                     onClick={this.onSubmit}
@@ -117,7 +117,7 @@ class SignInTwitterBase extends Component {
               return (
                 <div className="infoModal">
                   <form onSubmit={this.onSubmit}>
-                    <TwitterLoginButton
+                    <FacebookLoginButton
                       size="35px"
                       align="center"
                       onClick={this.onSubmit}
@@ -174,7 +174,7 @@ class SignInTwitterBase extends Component {
             }
             return (
               <form onSubmit={this.onSubmit}>
-                <TwitterLoginButton size="35px" type="submit" />
+                <FacebookLoginButton size="35px" type="submit" />
                 <div>Loading...</div>
                 {error && <p> {error.message} </p>}
               </form>
@@ -186,10 +186,10 @@ class SignInTwitterBase extends Component {
   }
 }
 
-const SignInTwitter = compose(
+const SignInFacebook = compose(
   withRouter,
   withFirebase
-)(SignInTwitterBase);
+)(SignInFacebookBase);
 Modal.setAppElement('body');
 
-export default SignInTwitter;
+export default SignInFacebook;

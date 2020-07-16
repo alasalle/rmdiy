@@ -2,16 +2,16 @@ import app from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 
-var config = {
-    apiKey: "AIzaSyB0F9XAuvMmsWG5LKEyWPbk2GL-o0yxIJ8",
-    authDomain: "rmdiy-18295.firebaseapp.com",
-    databaseURL: "https://rmdiy-18295.firebaseio.com",
-    projectId: "rmdiy-18295",
-    storageBucket: "rmdiy-18295.appspot.com",
-    messagingSenderId: "542093042806",
-    appId: "1:542093042806:web:9563fd45b09600fbafeb57",
-    measurementId: "G-1L4X92F409"
-}
+const config = {
+  apiKey: "AIzaSyD3OOLC2lKF1UIXz9K6vUiiK6Gs0pTo4jA",
+  authDomain: "alasalle-rmdiy.firebaseapp.com",
+  databaseURL: "https://alasalle-rmdiy.firebaseio.com",
+  projectId: "alasalle-rmdiy",
+  storageBucket: "alasalle-rmdiy.appspot.com",
+  messagingSenderId: "575060222865",
+  appId: "1:575060222865:web:51a15915fc7288e87a3030",
+  measurementId: "G-9PEHSFWKET"
+};
 
 class Firebase {
   constructor() {
@@ -24,6 +24,7 @@ class Firebase {
     this.github = new app.auth.GithubAuthProvider()
     this.google = new app.auth.GoogleAuthProvider()
     this.twitter = new app.auth.TwitterAuthProvider()
+    this.facebook = new app.auth.FacebookAuthProvider()
   }
 
   doCreateUserWithEmailAndPassword = (email, password) => {
@@ -36,6 +37,10 @@ class Firebase {
 
   doSignInWithTwitter = () => {
     return this.auth.signInWithPopup(this.twitter)
+  }
+
+  doSignInWithFacebook = () => {
+    return this.auth.signInWithPopup(this.facebook)
   }
 
   doSignInWithGithub = () => {

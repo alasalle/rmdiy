@@ -4,9 +4,7 @@ import { compose } from 'recompose'
 import { SignUpLink } from '../SignUp/SignUp'
 import { withFirebase } from '../Firebase/Exports'
 import * as ROUTES from '../../constants/routes'
-import SignInGithub from './ThirdPartyApi/Github'
-import SignInGoogle from './ThirdPartyApi/Google'
-import SignInTwitter from './ThirdPartyApi/Twitter'
+import SignInFacebook from './ThirdPartyApi/Facebook'
 import { PasswordForgetLink } from '../PasswordForget/PasswordForget'
 import { PasswordChangeLink } from '../PasswordChange/PasswordChange'
 import './SignIn.scss'
@@ -22,9 +20,7 @@ const SignInPage = () => (
         <PasswordChangeLink />
       </div>
       <div className="thirdPartyButtons">
-        <SignInGoogle />
-        <SignInTwitter />
-        <SignInGithub />
+        <SignInFacebook />
       </div>
       <SignUpLink />
     </div>
