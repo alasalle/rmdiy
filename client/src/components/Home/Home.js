@@ -21,8 +21,11 @@ class Home extends Component {
   }
 
   filterByCurrentMonth = (data) => {
+    const latestDate = new Date(Math.max.apply(null, data.map(function(e) {
+      return new Date(e.timestamp);
+    })));
     const filteredData = data.map((item) => {
-      if (moment({ hours: 0 }).diff(item.timestamp, 'days') <= 30) {
+      if (moment(latestDate).diff(item.timestamp, 'days') <= 30) {
         return item
       }
       return null
@@ -42,13 +45,28 @@ class Home extends Component {
       return null
     })
 
+
     const popularReviewer = []
+    const reviewTimes = []
+
+    eliminateEmptyReviews.map(user => {
+      return user.ReviewList.map(review => {
+        reviewTimes.push(review.timestamp)
+        return null
+      })
+    })
+
+    const latestDate = new Date(Math.max.apply(null, reviewTimes.map(function(e) {
+      return new Date(e);
+    })));
+
+
 
     for (let i = 0; i < eliminateEmptyReviews.length; i++) {
       //We get the reviews that are from the current month
       let currentReviews = eliminateEmptyReviews[i].ReviewList.filter(
         (review) => {
-          if (moment({ hours: 0 }).diff(review.timestamp, 'days') <= 30) {
+          if (moment(latestDate).diff(review.timestamp, 'days') <= 30) {
             return review
           }
           return null
@@ -80,6 +98,7 @@ class Home extends Component {
         })
       }
     }
+
     return popularReviewer.sort((a, b) => b.thumbsUpTotal - a.thumbsUpTotal)
   }
 
