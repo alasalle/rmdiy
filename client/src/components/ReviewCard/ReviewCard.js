@@ -77,9 +77,10 @@ class ReviewCard extends React.Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (this.props.users[0]) {
-      const { users, review, authUser } = this.props;
+      const { users, review } = this.props;
+      const authUser = await this.props.authUser;
 
       let visitor = users.filter((u) => u.email === authUser.email)[0];
 
@@ -162,8 +163,9 @@ class ReviewCard extends React.Component {
 
       if (loggedIn) {
         // console.log("logged in")
+        console.table({author: review.Author, authUser: authUser});
 
-        if (review.Author.email === authUser.email) {
+        if (review.Author.email === this.state.authUser.email) {
           // console.log("logged in, your review")
           if (review.projRating !== null && review.projRating !== undefined) {
             // console.log("logged in, your review, you rated the project")
